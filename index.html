@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Diseases</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .glow-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+            transition: all 0.3s ease;
+        }
+        .glow-card:hover {
+            border-color: rgba(56, 189, 248, 0.8);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+            transform: translateY(-5px);
+        }
+        .detail-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: border-color 0.2s ease;
+        }
+        .detail-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-4 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-wider text-cyan-400">GENETIC DISEASES</div>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+            <a href="#hero" class="hover:text-cyan-400 transition">Home</a>
+            <a href="#nf1" class="hover:text-cyan-400 transition">신경섬유종증 1형</a>
+            <a href="#wilson" class="hover:text-cyan-400 transition">윌슨병</a>
+            <a href="#menkes" class="hover:text-cyan-400 transition">멘케스병</a>
+            <a href="#whs" class="hover:text-cyan-400 transition">울프 허쉬호른</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section id="hero" class="min-h-screen pt-28 pb-16 px-6 flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="text-center max-w-3xl z-10 mb-12">
+            <p class="text-cyan-400 font-semibold tracking-widest uppercase text-sm mb-2">Genetics & Biology Research</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">4 GENETIC DISEASES EXPLORED</h1>
+            <p class="text-slate-400 text-base md:text-lg">유전자 변이 및 염색체 이상으로 발생하는 주요 4가지 유전병의 원인, 유전 방식, 증상, 진단 및 치료법을 탐구합니다.</p>
+        </div>
+
+        <!-- 4 Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl z-10">
+            <!-- Card 1 -->
+            <div class="glow-card rounded-2xl p-6 flex flex-col justify-between text-center">
+                <div>
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">01</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">신경섬유종증 1형</h3>
+                    <p class="text-slate-400 text-sm mb-6">17번 염색체 NF1 유전자 변이로 인한 신호전달 이상 및 다발성 종양 질환</p>
+                </div>
+                <a href="#nf1" class="inline-block w-full py-2.5 px-4 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 font-medium text-sm border border-cyan-500/30 transition">자세히 보기</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glow-card rounded-2xl p-6 flex flex-col justify-between text-center">
+                <div>
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">02</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">윌슨병</h3>
+                    <p class="text-slate-400 text-sm mb-6">ATP7B 유전자 돌연변이로 간세포 내 구리 배출 장애 및 체내 축적 질환</p>
+                </div>
+                <a href="#wilson" class="inline-block w-full py-2.5 px-4 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 font-medium text-sm border border-cyan-500/30 transition">자세히 보기</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glow-card rounded-2xl p-6 flex flex-col justify-between text-center">
+                <div>
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">03</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">멘케스병</h3>
+                    <p class="text-slate-400 text-sm mb-6">X염색체 ATP7A 유전자 결함으로 발생하는 구리 운반 장애 및 신경 퇴행 질환</p>
+                </div>
+                <a href="#menkes" class="inline-block w-full py-2.5 px-4 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 font-medium text-sm border border-cyan-500/30 transition">자세히 보기</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glow-card rounded-2xl p-6 flex flex-col justify-between text-center">
+                <div>
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">04</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">울프 허쉬호른 증후군</h3>
+                    <p class="text-slate-400 text-sm mb-6">4번 염색체 단완(4p16.3) 결실로 인한 신체 발달 지연 및 특이 외모 증후군</p>
+                </div>
+                <a href="#whs" class="inline-block w-full py-2.5 px-4 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/40 text-cyan-300 font-medium text-sm border border-cyan-500/30 transition">자세히 보기 (인터랙티브)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections Main Box -->
+    <main class="bg-slate-900/90 py-16 px-6 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto space-y-24">
+
+            <!-- Disease 01: 신경섬유종증 1형 -->
+            <section id="nf1" class="scroll-mt-24">
+                <div class="border-b border-slate-700 pb-4 mb-6">
+                    <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Disease 01</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">신경섬유종증 1형 (Neurofibromatosis type 1)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">1. 유전적 원인</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            17번 염색체 장완에 위치한 <strong>NF1 유전자</strong>의 구조적 변이로 발생합니다[cite: 4]. 정상 상태에서는 종양 억제 단백질인 <strong>뉴로파이브로민</strong>을 만들어 세포 성장·분열을 조절하는 RAS/MAPK 신호전달경로의 스위치를 끕니다[cite: 4]. 변이가 발생하면 뉴로파이브로민의 기능이 상실되어 RAS 신호가 지속 활성화되고, 슈반 세포 등 신경계 주변 조직이 과도하게 증식하여 전신 신경을 따라 다발성 종양이 형성됩니다[cite: 4].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">2. 유전 방식</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>상염색체 우성</strong> 방식으로 유전되며, 환자 자녀에게 질환이 유전될 확률은 50%입니다[cite: 4]. 전체 환자의 약 절반은 부모 유전 없이 발생한 <strong>신규 돌연변이</strong>에 해당합니다(NF1 유전자의 크기가 크고 구조가 복잡하기 때문)[cite: 4]. 또한 동일 유전자 변이를 공유하더라도 증상 중증도가 극명하게 달라지는 <strong>가변적 발현도</strong>를 보입니다[cite: 4].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">3. 주요 증상 · 특징</h4>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-1 list-disc list-inside">
+                            <li><strong>피부/말초신경계:</strong> 밀크커피색 반점(출생 직후), 겨드랑이/서혜부 주근깨, 피하 신경섬유종, 외형 변형과 통증을 유발하는 얼기상 신경섬유종[cite: 4].</li>
+                            <li><strong>안과/골격계:</strong> 홍채 리쉬 소결절, 시신경 아교종, 접형골 이형성, 정강이뼈 가성관절, 척추측만증[cite: 4].</li>
+                            <li><strong>신경/인지:</strong> 환자의 절반 가량에서 학습 장애 및 인지기능 저하 동반[cite: 4].</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">4. 진단 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            미국 국립보건원(NIH) 7가지 표준 진단 기준 중 <strong>2가지 이상</strong>을 만족할 때 확진합니다[cite: 4, 5].
+                        </p>
+                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                            * 기준: 밀크커피색 반점 6개 이상, 신경섬유종 2개 이상(또는 얼기상 1개 이상), 겨드랑이/서혜부 주근깨, 시신경 아교종, 홍채 리쉬 소결절 2개 이상, 특징적 뼈 병변, 1도 친척 NF1 환자[cite: 5]. 분자유전학 검사(NGS)는 진단 보조 및 산전 진단 시 선별 병행합니다[cite: 5].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl md:col-span-2">
+                        <h4 class="text-cyan-300 font-semibold mb-2">5. 치료 및 관리 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            근본 완치법은 없으며 증상 완화 대증 치료 및 다학제적 추적 관찰을 시행합니다[cite: 5]. 통증이나 변형을 유발하는 종양은 외과적 절제를 진행하며, 최근 MEK1/2 활성을 차단하는 표적항암제 <strong>셀루메티닙</strong>이 개발되어 얼기상 신경섬유종 크기 감소에 효과를 보이고 있습니다[cite: 5]. 안과·정형외과·신경외과 등 주기적 협진 모니터링이 필수적입니다[cite: 5].
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Disease 02: 윌슨병 -->
+            <section id="wilson" class="scroll-mt-24">
+                <div class="border-b border-slate-700 pb-4 mb-6">
+                    <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Disease 02</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">윌슨병 (Wilson's Disease)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">1. 유전적 원인</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            간세포 내 구리 운반 단백질을 암호화하는 <strong>ATP7B 유전자 돌연변이</strong>로 발생합니다[cite: 6, 7]. 정상 상태에서 ATP7B 단백질은 구리를 apo-ceruloplasmin과 결합시켜 혈액으로 방출하거나, 담즙을 통해 체외로 배출시킵니다[cite: 6]. 돌연변이 발생 시 구리가 담즙으로 배출되지 못해 간세포 내에 갇혀 간 손상을 일으키며, 혈중 ceruloplasmin 농도가 감소하게 됩니다[cite: 7].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">2. 유전 방식</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>상염색체 열성</strong> 방식으로 유전되며, 부모로부터 변이된 ATP7B 유전자를 각각 하나씩 물려받아야 발병합니다[cite: 7, 8]. 임상적으로 서로 다른 두 가지 돌연변이를 함께 지닌 '복합 이형접합체(compound heterozygote)' 형태가 흔하게 관찰됩니다[cite: 7, 9].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">3. 주요 증상 · 특징</h4>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-1 list-disc list-inside">
+                            <li><strong>간 질환:</strong> 간비대, 만성활동성 간염, 간경변증, 복수, 급성 전격성 간부전[cite: 8].</li>
+                            <li><strong>신경/정신:</strong> 구음장애, 미세운동장애, 근긴장이상, 보행이상, 우울증, 공격적 행동장애[cite: 8].</li>
+                            <li><strong>안과/기타:</strong> 각막의 Kayser-Fleischer 고리, 해바라기 백내장, 용혈성 빈혈, Fanconi 증후군, 신결석[cite: 8].</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">4. 진단 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            혈청 Ceruloplasmin 측정(20 mg/dL 미만 감지), 24시간 소변 구리 배출량 측정(100 µg 초과 시 유의), 간 생검 조직 구리 함량 측정(250 µg/g dry wgt 초과), 세극등 검사(Kayser-Fleischer 고리 확인) 및 분자유전학 검사(R778L 등 대표 변이 분석)를 통해 종합적으로 진단합니다[cite: 8, 9].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl md:col-span-2">
+                        <h4 class="text-cyan-300 font-semibold mb-2">5. 치료 및 관리 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>평생 약물 치료:</strong> 구리 배출 약제(D-penicillamine, Trientine) 및 구리 흡수 억제제(아연 제제)를 평생 규칙적으로 복용해야 합니다(임의 중단 시 급성 간부전 위험)[cite: 10].<br>
+                            <strong>식이 및 완치:</strong> 조개류, 견과류, 초콜릿, 동물 간 등 구리 함량이 높은 식품 섭취를 제한하며, 약물 불응성 간부전 시 간 이식이 유일한 완치 요법입니다[cite: 10].
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Disease 03: 멘케스병 -->
+            <section id="menkes" class="scroll-mt-24">
+                <div class="border-b border-slate-700 pb-4 mb-6">
+                    <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Disease 03</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">멘케스병 (Menkes Disease)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">1. 유전적 원인</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            X염색체 장완(Xq13.2-q13.3)에 위치한 <strong>ATP7A 유전자 변이</strong>로 발생합니다[cite: 12]. 구리 전달체(Menkes Cu ATPase) 결함으로 인해 세포막을 통한 구리 전달이 불가능해져 구리 의존성 효소들의 기능 저하가 전신적으로 초래됩니다[cite: 12].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">2. 유전 방식</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>성염색체(X-linked) 열성</strong> 방식으로 유전됩니다[cite: 12]. 주로 남성에게서 증상이 전형적으로 발현됩니다.
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">3. 주요 증상 · 특징</h4>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-1 list-disc list-inside">
+                            <li><strong>신경계:</strong> 생후 2-3개월경 발달 지연 및 퇴행, 몸통 저긴장증, 영아 연축 등 심한 경련[cite: 12].</li>
+                            <li><strong>외형:</strong> 꼬이고 잘 부스러지는 저색소성 모발(Pili torti), 늘어진 뺨과 귀, 낮은 콧등[cite: 12].</li>
+                            <li><strong>전신:</strong> 관절 유연성, 피부 늘어짐, 탈장, 동맥류/혈전증, 골다공증 및 후두각 석회화[cite: 12].</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">4. 진단 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            혈청 구리 및 세룰로플라스민 수치 저하 검사, 특이 바이오마커인 혈장 카테콜아민 비율(DOPA/DHPG 상승) 측정, 모발 광학/전자현미경 구조 이상 검사, ATP7A 유전자 염기서열 분석 및 MLPA, 뇌 MRI(백질 이상, 구불구불한 뇌혈관)를 종합하여 확진합니다[cite: 12, 13].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl md:col-span-2">
+                        <h4 class="text-cyan-300 font-semibold mb-2">5. 치료 및 관리 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>구리-히스티딘(Copper histidine) 피하 주사:</strong> 생후 25~28일 이내 조기 투여 시 일부 신경 발달을 유지할 수 있으나, 증상 발현 후에는 혈뇌장벽(BBB) 투과 제한으로 신경 퇴행 차단에 한계가 있습니다[cite: 13].<br>
+                            <strong>지원 치료:</strong> 항경련제, 영양 지원(위루술), 완화 의료 및 PGT-M(착상 전 유전자 진단)을 통한 가족 유전 상담을 병행합니다[cite: 13].
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Disease 04: 울프 허쉬호른 증후군 + Interactive -->
+            <section id="whs" class="scroll-mt-24">
+                <div class="border-b border-slate-700 pb-4 mb-6">
+                    <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Disease 04</span>
+                    <h2 class="text-3xl font-bold text-white mt-1">울프 허쉬호른 증후군 (Wolf-Hirschhorn Syndrome)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">1. 유전적 원인</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>4번 염색체 단완 말단 부위(4p16.3)의 결실(소실)</strong>로 발생합니다[cite: 15]. 핵심 증상을 유발하는 1.5~1.6 Mb 부위에 위치한 여러 유전자(NSD2, LETM1, MSX1 등)의 부족이 신체 전반의 발달 이상을 유발합니다[cite: 15].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">2. 유전 방식</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            환자의 85~90%는 부모의 유전 없이 생식세포 형성 또는 배아 초기 발달 과정에서 발생하는 <strong>산발적 돌연변이</strong>에 해당합니다[cite: 15]. 나머지 10~15%는 부모의 '균형 잡힌 염색체 전위'가 자녀에게 불균형 유전되어 발생합니다[cite: 15].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">3. 주요 증상 · 특징</h4>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-1 list-disc list-inside">
+                            <li><strong>그리스 투구형 얼굴:</strong> 넓은 미간, 돌출 이마, 양안격리증, 처진 입꼬리, 작은 턱[cite: 15].</li>
+                            <li><strong>발달 및 신경:</strong> 신체 성장 지연, 경증~중증 지적 장애, 유아기/소아기 뇌전증 발작[cite: 15].</li>
+                            <li><strong>기타:</strong> 근육 저긴장증, 선천성 심장 기형, 구순구개열, 신장 기형, 척추측만증[cite: 15].</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl">
+                        <h4 class="text-cyan-300 font-semibold mb-2">4. 진단 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            특징적인 외모(그리스 투구형 얼굴), 성장 및 발달 지체, 발작 임상 평가와 함께 배아 및 신생아 단계의 염색체 분자유전학 검사(FISH, Array CGH 등)를 실시하여 4p16.3 미세결실을 확진합니다[cite: 15, 16].
+                        </p>
+                    </div>
+                    <div class="detail-card p-5 rounded-xl md:col-span-2">
+                        <h4 class="text-cyan-300 font-semibold mb-2">5. 치료 및 관리 방법</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            근본적인 염색체 복구 치료법은 없으며 증상 완화 대증 치료가 중심이 됩니다[cite: 16]. 뇌전증 조절을 위한 항경련제 약물 치료, 재활(물리/작업/언어치료), 심장 기형 및 구순구개열 외과 수술, 영유아 수유·영양 관리가 진행됩니다[cite: 16].
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Simulation Section -->
+                <div class="bg-slate-950 border border-cyan-500/40 rounded-2xl p-6 shadow-2xl">
+                    <div class="text-center mb-6">
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30 font-semibold">INTERACTIVE SIMULATION</span>
+                        <h3 class="text-2xl font-bold mt-2 text-white">울프-허쉬호른 증후군 생식세포 수정 시뮬레이션</h3>
+                        <p class="text-slate-400 text-sm mt-1">수정시킬 정자의 4번 염색체 상태를 선택하여 태아의 발병 여부를 직접 확인하세요.</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6 my-6">
+                        <!-- Ovum -->
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-rose-500/20 border-2 border-rose-400 rounded-full flex flex-col items-center justify-center mx-auto mb-2 text-rose-300 font-bold shadow-lg">
+                                <span>정상 난자</span>
+                                <span class="text-[10px] font-normal text-rose-200">(4번 염색체 정상)</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-slate-500">+</div>
+                        <!-- Sperm Selection -->
+                        <div class="flex flex-col gap-3">
+                            <button onclick="selectSperm('normal')" id="btn-normal" class="px-5 py-3 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-sm font-medium transition text-left flex items-center gap-3">
+                                <span class="text-lg">🔵</span>
+                                <div>
+                                    <div class="font-bold">정상 정자</div>
+                                    <div class="text-xs text-slate-400">4번 염색체 단완 정상 보존</div>
+                                </div>
+                            </button>
+                            <button onclick="selectSperm('mutated')" id="btn-mutated" class="px-5 py-3 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-sm font-medium transition text-left flex items-center gap-3">
+                                <span class="text-lg">🔴</span>
+                                <div>
+                                    <div class="font-bold">돌연변이 정자</div>
+                                    <div class="text-xs text-slate-400">4번 염색체 단완(4p16.3) 결실 발생</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-6">
+                        <button onclick="fertilize()" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl shadow-lg transition transform active:scale-95">수정시키기</button>
+                    </div>
+
+                    <!-- Result Display -->
+                    <div id="result-box" class="hidden mt-6 p-5 rounded-xl text-center border transition-all">
+                        <h4 id="result-title" class="font-bold text-xl mb-1"></h4>
+                        <p id="result-desc" class="text-sm leading-relaxed"></p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-500 text-xs">
+        <p>© 2026 Genetic Diseases Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactive Feature -->
+    <script>
+        let selectedType = null;
+
+        function selectSperm(type) {
+            selectedType = type;
+            const btnNormal = document.getElementById('btn-normal');
+            const btnMutated = document.getElementById('btn-mutated');
+
+            if(type === 'normal') {
+                btnNormal.className = "px-5 py-3 rounded-xl border-2 border-cyan-400 bg-cyan-500/20 text-cyan-300 text-sm font-medium transition text-left flex items-center gap-3 shadow-md";
+                btnMutated.className = "px-5 py-3 rounded-xl border border-slate-700 bg-slate-800 text-slate-400 text-sm font-medium transition text-left flex items-center gap-3 opacity-60";
+            } else {
+                btnMutated.className = "px-5 py-3 rounded-xl border-2 border-rose-400 bg-rose-500/20 text-rose-300 text-sm font-medium transition text-left flex items-center gap-3 shadow-md";
+                btnNormal.className = "px-5 py-3 rounded-xl border border-slate-700 bg-slate-800 text-slate-400 text-sm font-medium transition text-left flex items-center gap-3 opacity-60";
+            }
+        }
+
+        function fertilize() {
+            if(!selectedType) {
+                alert('수정시킬 정자(정상 또는 돌연변이)를 먼저 선택해 주세요!');
+                return;
+            }
+
+            const resultBox = document.getElementById('result-box');
+            const resultTitle = document.getElementById('result-title');
+            const resultDesc = document.getElementById('result-desc');
+
+            resultBox.classList.remove('hidden');
+
+            if(selectedType === 'normal') {
+                resultBox.className = "mt-6 p-5 rounded-xl text-center bg-emerald-500/10 border border-emerald-500/40 text-emerald-300 animate-fade-in";
+                resultTitle.innerText = "👶 정상 형질을 가진 아이가 태어났습니다.";
+                resultDesc.innerText = "4번 염색체 단완(4p16.3) 결실이 유발되지 않아 울프-허쉬호른 증후군 없이 정상 발달합니다.";
+            } else {
+                resultBox.className = "mt-6 p-5 rounded-xl text-center bg-rose-500/10 border border-rose-500/40 text-rose-300 animate-fade-in";
+                resultTitle.innerText = "⚠️ 울프-허쉬호른 증후군을 가진 아이가 태어났습니다.";
+                resultDesc.innerText = "결실된 4번 염색체로 인해 4p16.3 핵심 영역 유전자(NSD2, LETM1 등) 부재로 특이 외모, 발달 지연 및 뇌전증 발작 증상이 발현됩니다.";
+            }
+        }
+    </script>
+</body>
+</html>
